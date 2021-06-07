@@ -1,0 +1,289 @@
+
+*{
+	margin: 0;
+	padding: 0;	
+}
+ body{
+ 	font-family: 'Satisfy', cursive;
+ 	background: url(image/stars.jpg) center no-repeat;
+ 	background-size: cover;
+}
+.container{
+	width: 100%;
+	height: 100vh;
+    box-sizing: border-box;
+	background-size: cover;
+	opacity: 0.9;
+
+}
+/*style of navbar */
+/*position is fixed to the right */
+.navbar{
+	width: 300px;
+	height: 100%;
+	background-color: #262626;
+	position: fixed;
+	top: 0;
+/* hides the navbar */
+	right: -300px;
+	display: flex ;
+	justify-content: center;
+	align-items: center;
+	transition: right .8s cubic-bezier(1, 0, 0, 1);
+	background-color: black;
+	opacity: .9;
+}
+/*hamburger menu styles */
+.hamburger-menu {
+	width: 35px;
+	height: 30px;
+	position: fixed;
+	top: 50px; 
+	right: 50px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+/* Shows the navbar */
+.change {
+	right: 0;
+}
+/* Each 3 lines ---- */
+.line {
+	width: 100%;
+	height: 3px;
+	background-color: #fff;
+	box-shadow: 0 0 10px #fff,
+	             0 0 20px #fff,
+	             0 0 40px #fff,
+	             0 0 80px #fff,
+	             0 0 120px #fff,
+	             0 0 160px #fff;
+	transition: all 0.8s;
+}
+/* X icon for .hamburger-menu */
+.change .line-1 {
+	transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+.change .line-2 {
+	opacity: 0;
+}
+.change .line-3 {
+    transform: rotateZ(405deg) translate(-8px, -6px);
+}
+.nav-list {
+	text-align: right;
+}
+.nav-item {
+	list-style: none;
+	margin: 25px;
+}
+ /* individual navigation links */
+ .nav-link {
+ 	text-decoration: none;
+    font-size: 22px;
+    color: #eee;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 3px 0;
+}	
+.nav-link::before, .nav-link::after {
+	content:"";
+	width: 100%;
+	height: 2px;
+	background-color: white;
+	box-shadow:  0 0 5px #009D99,
+	             0 0 25px #009D99,
+	             0 0 50px #009D99,
+	             0 0 100PX #009D99;
+	position: absolute;
+	left: 0;
+	transform: scaleX(0);
+	transition: transform 0.5s;
+}
+.nav-link::before {
+	bottom: 0; 
+	transform-origin: right;
+}
+.nav-link::after {
+	top: 0;
+	transform-origin: left;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+	transform:scalex(1);
+
+}
+.text {
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+}
+.welcome-text {
+	position: absolute;
+	top: 50px;
+	width: 500px;
+	margin: 20% 30%;
+	text-align: center;
+}
+.welcome-text h1 {
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 50px;
+}
+.welcome-text a {
+	border: 1px solid #fff;
+	padding: 10px 25px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-top: 20px;
+	display: inline-block;
+	color: black;
+}
+.welcome-text a:hover {
+   background: #fff;
+   color: #333;
+   	box-shadow: 0 0 5px #009D99,
+	             0 0 25px #009D99,
+	             0 0 50px #009D99,
+	
+	             0 0 100PX #009D99; 
+}
+
+/* contact page start */
+.contact {
+	position: relative;
+	min-height: 100vh;
+	padding: 50px 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: url(image/stars.jpg);
+	background-size: cover;
+}
+.contact .content{
+	max-width: 800px;
+	text-align: center;
+}
+.contact .content h2{
+	font-size: 36px;
+	font-weight: 500;
+	color: #fff;
+}
+.container-c{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container-c .contactInfo{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+.container-c .contactInfo .box{
+	position: relative;
+	padding: 20px 0;
+	display: flex;
+	color: white;
+}
+.container-c .contactInfo .box .icon{
+	min-width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	font-size: 22px;
+	color: white;
+}
+.container-c .contactInfo .box .text{
+	display: flex;
+	margin-left: 20px;
+	font-size: 16px;
+	color: #fff;
+	flex-direction: column;
+	font-weight: 300;
+}
+.container-c .contactInfo .box .texth3{
+	font-weight: 500;
+	color: #00bcd4;
+}
+.contact-form{
+	width: 40%;
+	padding: 40px;
+	background: #fff;
+}
+.contact-form h2{
+	font-size: 30px;
+	color: #333;
+	font-weight: 500;
+}
+.contact-form .inputbox{
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
+}
+.contact-form .inputbox input,
+.contact-form .inputbox textarea{
+	width: 100%;
+	padding: 5px 0;
+	font-size: 16px;
+	margin: 10px 0;
+	border: none;
+	border-bottom: 2px solid #333;
+	outline: none;
+	resize: none;
+}
+.contact-form .inputbox span{
+	position: absolute;
+	left: 0;
+	padding: 5px 0;
+	font-size: 16px;
+	margin: 10px 0;
+	pointer-events: none;
+	transition: 0.5s;
+	color: #666;
+}
+.contact-form .inputbox input:focus ~ span,
+.contact-form .inputbox input:valid ~ span,
+.contact-form .inputbox textarea:focus ~ span,
+.contact-form .inputbox textarea:valid ~ span{
+	color: #e91e63;
+	font-size: 12px;
+	transform: translateY(-20px);
+}
+.contact-form .inputbox input[type="submit"]{
+	width: 100px;
+	background: #00bcd4;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+	font-size: 18px;
+}
+@media (max-width: 991px){
+	.contact{
+		padding: 50px;
+	}
+	.container-c{
+		flex-direction: column;
+	}
+	.container-c .contactInfo{
+		width: 80%;
+		margin-bottom: 20px;
+	}
+	.contact-form{
+		width: 60%;
+	}
+
+/* contact section end */
