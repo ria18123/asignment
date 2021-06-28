@@ -4,17 +4,25 @@
 	padding: 0;	
 }
  body{
- 	font-family: 'Satisfy', cursive;
- 	background: url(image/stars.jpg) center no-repeat;
- 	background-size: cover;
+ 	font-family: ;
+}
+.wrapper{
+     width:1170; 
+     margin: auto;
+}
+header{
+	background-image:url("image/stars.jpg");
+	position: fixed;
+	height: 100vh;
+	-webkit-background-size: cover;
+	background-size:cover;
+	background-position: center center;
+	position: relative;
 }
 .container{
 	width: 100%;
 	height: 100vh;
-    box-sizing: border-box;
-	background-size: cover;
 	opacity: 0.9;
-
 }
 /*style of navbar */
 /*position is fixed to the right */
@@ -54,7 +62,7 @@
 .line {
 	width: 100%;
 	height: 3px;
-	background-color: #fff;
+	background-color: chocolate;
 	box-shadow: 0 0 10px #fff,
 	             0 0 20px #fff,
 	             0 0 40px #fff,
@@ -166,7 +174,7 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background: url(image/stars.jpg);
+	background: url(image/safe.jpg);
 	background-size: cover;
 }
 .contact .content{
@@ -190,13 +198,13 @@
 	display: flex;
 	flex-direction: column;
 }
-.container-c .contactInfo .box{
+.container-c .contactInfo .box-x{
 	position: relative;
 	padding: 20px 0;
 	display: flex;
 	color: white;
 }
-.container-c .contactInfo .box .icon{
+.container-c .contactInfo .box-x .icon{
 	min-width: 60px;
 	height: 60px;
 	display: flex;
@@ -206,7 +214,7 @@
 	font-size: 22px;
 	color: white;
 }
-.container-c .contactInfo .box .text{
+.container-c .contactInfo .box-x .text{
 	display: flex;
 	margin-left: 20px;
 	font-size: 16px;
@@ -214,7 +222,7 @@
 	flex-direction: column;
 	font-weight: 300;
 }
-.container-c .contactInfo .box .texth3{
+.container-c .contactInfo .box-x .texth3{
 	font-weight: 500;
 	color: #00bcd4;
 }
@@ -286,4 +294,134 @@
 		width: 60%;
 	}
 
-/* contact section end */
+/* contact page end */
+
+/* portfolio page start */
+
+}
+.image-grid {
+	display: flex;
+	width: 90%;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	margin-top: 17%;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.grid-image {
+	display:block;
+	flex-basis: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+@media only screen and (min-width: 640px) {
+	.grid-image {
+		flex-basis: 50%;
+	}
+}
+@media only screen and (min-width: 960px) {
+	.grid-image {
+		flex-basis: 33.333%;
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	.grid-image {
+		flex-basis: 25%;
+	}
+}
+
+
+/* portfolio page end */
+
+/*cv page begin */
+}
+body {
+	margin: 0;
+	padding: 0;
+	color: black;
+	font-family: 'Slabo 27px', serif;
+}
+h1{
+    margin: 0;
+    font-weight: 300;
+}
+h2{
+    margin: 0;
+    font-weight: 400;
+    display: inline-block;
+}
+h3{
+	margin: 0;
+	font-weight: 400;
+	text-decoration: underline;
+	display: inline-block;
+}
+.box{
+    background: #fff;
+    width: 50rem;
+    padding: 3rem;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+    background: rgb(240, 239, 239);
+}
+.header-v{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+.header-left {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.first-name {
+    font-weight: 400;
+    margin: 0;
+}
+.last-name{
+    font-weight: 200;
+    margin: 0;
+}
+.header-right{
+    width: 100%;
+    display: grid;
+    justify-items: end;
+}
+.header-right p{
+    display: inline;
+}
+.icon{
+    color: rgba(190, 190,190);
+    font-size:1.5rem;
+    margin-right: 0.5rem;
+}
+.grey{
+    background: rgba(133, 133, 133);
+    color:#fff;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+}
+table{
+    border: 2px solid #000;
+    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+td,
+th {
+    border: 1px solid #000;
+    padding: 0.4rem;
+}
+#course-name{
+	font-weight: bold;
+}
+.Declaration{
+	margin: 1rem 0;
+}
+/* cv page end */
+
