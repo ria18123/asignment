@@ -3,25 +3,22 @@
 	margin: 0;
 	padding: 0;	
 }
+html{
+	scroll-behavior: smooth;
+}
  body{
- 	font-family: ;
+ 	font-family: 'slabo 27px', serif;
+ 	background: url(image/stars.jpg) center no-repeat;
+ 	background-size: cover;
 }
 .wrapper{
-     width:1170; 
      margin: auto;
-}
-header{
-	background-image:url("image/stars.jpg");
-	position: fixed;
-	height: 100vh;
-	-webkit-background-size: cover;
-	background-size:cover;
-	background-position: center center;
-	position: relative;
 }
 .container{
 	width: 100%;
 	height: 100vh;
+	box-sizing: border-box;
+	background-size: cover;
 	opacity: 0.9;
 }
 /*style of navbar */
@@ -34,13 +31,14 @@ header{
 	top: 0;
 /* hides the navbar */
 	right: -300px;
-	display: flex ;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	transition: right .8s cubic-bezier(1, 0, 0, 1);
 	background-color: black;
 	opacity: .9;
 }
+
 /*hamburger menu styles */
 .hamburger-menu {
 	width: 35px;
@@ -62,7 +60,7 @@ header{
 .line {
 	width: 100%;
 	height: 3px;
-	background-color: chocolate;
+	background-color: #fff;
 	box-shadow: 0 0 10px #fff,
 	             0 0 20px #fff,
 	             0 0 40px #fff,
@@ -72,6 +70,7 @@ header{
 	transition: all 0.8s;
 }
 /* X icon for .hamburger-menu */
+
 .change .line-1 {
 	transform: rotateZ(-405deg) translate(-8px, 6px);
 }
@@ -127,6 +126,8 @@ header{
 	transform:scalex(1);
 
 }
+/*home section begins*/
+
 .text {
 	position: relative;
 	width: 90%;
@@ -161,21 +162,31 @@ header{
    	box-shadow: 0 0 5px #009D99,
 	             0 0 25px #009D99,
 	             0 0 50px #009D99,
-	
 	             0 0 100PX #009D99; 
 }
+@media (max-width:800px){
+	.container{
+		margin-bottom: 100px;
+	}
+	.welcome-text{
+		left: -45%;
+		top: 30%;
+	}
+    .navbar{
+    	width: 150px;
+    }
+/*home section ends */
+
 
 /* contact page start */
 .contact {
 	position: relative;
-	min-height: 100vh;
+	height: 80vh;
 	padding: 50px 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background: url(image/safe.jpg);
-	background-size: cover;
 }
 .contact .content{
 	max-width: 800px;
@@ -222,7 +233,7 @@ header{
 	flex-direction: column;
 	font-weight: 300;
 }
-.container-c .contactInfo .box-x .texth3{
+.container-c .contactInfo .box-x .text h3{
 	font-weight: 500;
 	color: #00bcd4;
 }
@@ -281,7 +292,8 @@ header{
 }
 @media (max-width: 991px){
 	.contact{
-		padding: 50px;
+		padding: 60px;
+		height: 120vh;
 	}
 	.container-c{
 		flex-direction: column;
@@ -306,8 +318,7 @@ header{
 	flex-wrap: wrap;
 	margin-top: 17%;
 	align-items: center;
-	justify-content: center;
-
+	justify-content: center;g
 }
 
 .grid-image {
@@ -422,6 +433,26 @@ th {
 }
 .Declaration{
 	margin: 1rem 0;
+}
+@media (max-width:750px){
+	.box{
+		width: 15rem;
+	}
+	td,
+	th {
+		padding: 0.1rem;
+	}
+	.first-name{
+		font-size: 40px;
+	}
+	.last-name {
+		font-size: 35px;
+	}
+	.box{
+		margin-top: 100px;
+		padding: 2rem;
+		height: 850px;
+	}
 }
 /* cv page end */
 
